@@ -1,0 +1,18 @@
+I want you to create a angular project for a landing page of a sbom validation tool named centinal.
+what it will do it will validate the sbom(software bill of materials) and returns whether it is passed or not. If not it will provide errors and other info. Intially there is no need of authentication and authorization. But will add as of now we will disable.
+
+The project scope
+
+-- one main home page which describes the tool neat cool interaction and display the logo and other things and at the top or right corner will give the list of menus we are going to have. Headers body and footer.
+-- Try out page. here there should be a tab modal where they can select the type of input either text or a json file or xml or simply they copy and paste the data of the sbom. we should get the data and send to the api and it gives the response.
+-- finally log in screen where it will accept email and password, remember me and login button dont have an account then register. Then register screen should consist Username, email, password, re type password. Password strength checking and then register in the register screen and finally register button and if already registerd then sign in.
+
+Must be responsive and should easily adapt to the all browsers. 
+Design theme should be a professional one and use gradient colors and glass morphism efects on the home page. Make how much beautiful and attractive you can. You can use either the tail wind or bootstrap for the styling and use some animations and parallax effects in the home page.
+
+This is the full scope of the project. So will just start with step by step.
+1. Project setup
+2. Home Page
+3. Login and Register Page.
+
+ok. If you had any doubts ask me. else give full detailed instructions to make it ready in the local from the requirements to project setup ok.

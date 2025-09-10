@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Centinal - Create Account</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<style type="text/tailwindcss">
+    :root {
+      --tw-bg-opacity-glass: 0.1;
+      --tw-border-opacity-glass: 0.2;
+      --tw-shadow-color-glass: rgba(0, 0, 0, 0.1);
+      --tw-backdrop-blur-glass: blur(16px);
+      --tw-backdrop-saturate-glass: saturate(180%);
+    }
+    .glass-card {
+        background-color: rgba(255, 255, 255, var(--tw-bg-opacity-glass));
+        backdrop-filter: var(--tw-backdrop-blur-glass) var(--tw-backdrop-saturate-glass);
+        -webkit-backdrop-filter: var(--tw-backdrop-blur-glass) var(--tw-backdrop-saturate-glass);
+        border: 1px solid rgba(255, 255, 255, var(--tw-border-opacity-glass));
+        box-shadow: 0 8px 32px 0 var(--tw-shadow-color-glass);
+    }
+    body {
+        font-family: 'Manrope', sans-serif;
+    }
+    .form-input {
+      background-color: rgba(39, 48, 58, 0.5);
+      border: 1px solid rgba(58, 71, 85, 0.7);
+    }
+    .form-input:focus {
+      border: 1px solid #1587f9;
+      box-shadow: 0 0 0 2px rgba(21, 135, 249, 0.3);
+    }
+  </style>
+</head>
+<body class="bg-[#111418] text-white">
+<div class="flex flex-col min-h-screen">
+<header class="sticky top-0 z-50 bg-[#111418]/80 backdrop-blur-sm border-b border-solid border-b-[#27303a]">
+<nav class="container mx-auto px-6 py-4 flex items-center justify-between">
+<a class="flex items-center gap-3" href="#">
+<svg class="h-8 w-8 text-[#1587f9]" fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M24 45.8096C19.6865 45.8096 15.4698 44.5305 11.8832 42.134C8.29667 39.7376 5.50128 36.3314 3.85056 32.3462C2.19985 28.361 1.76794 23.9758 2.60947 19.7452C3.451 15.5145 5.52816 11.6284 8.57829 8.5783C11.6284 5.52817 15.5145 3.45101 19.7452 2.60948C23.9758 1.76795 28.361 2.19986 32.3462 3.85057C36.3314 5.50129 39.7376 8.29668 42.134 11.8833C44.5305 15.4698 45.8096 19.6865 45.8096 24L24 24L24 45.8096Z" fill="currentColor"></path>
+</svg>
+<h1 class="text-xl font-bold">Centinal</h1>
+</a>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-sm font-medium hover:text-[#1587f9] transition-colors" href="#">Overview</a>
+<a class="text-sm font-medium hover:text-[#1587f9] transition-colors" href="#">Features</a>
+<a class="text-sm font-medium hover:text-[#1587f9] transition-colors" href="#">Pricing</a>
+<a class="text-sm font-medium hover:text-[#1587f9] transition-colors" href="#">Contact</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="flex items-center justify-center h-10 w-10 rounded-full hover:bg-[#27303a] transition-colors">
+<span class="material-symbols-outlined">wb_sunny</span>
+</button>
+<a class="hidden md:inline-flex items-center justify-center h-10 px-5 bg-[#27303a] hover:bg-[#3a4755] transition-colors text-sm font-bold rounded-lg" href="#">
+                Sign In
+              </a>
+<button class="md:hidden flex items-center justify-center h-10 w-10 rounded-full hover:bg-[#27303a] transition-colors">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</nav>
+</header>
+<main class="flex-grow flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
+<div class="w-full max-w-md space-y-8">
+<div class="glass-card rounded-2xl p-8 shadow-2xl">
+<div class="text-center mb-8">
+<h2 class="text-3xl font-extrabold text-white">Create your account</h2>
+<p class="mt-2 text-sm text-gray-400">Join our community of security-conscious developers.</p>
+</div>
+<form action="#" class="space-y-6" method="POST">
+<div>
+<label class="sr-only" for="full-name">Full Name</label>
+<input class="form-input w-full px-4 py-3 rounded-lg text-sm placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-[#111418] focus:ring-[#1587f9]" id="full-name" name="full-name" placeholder="Full Name" required="" type="text"/>
+</div>
+<div>
+<label class="sr-only" for="email-address">Email address</label>
+<input autocomplete="email" class="form-input w-full px-4 py-3 rounded-lg text-sm placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-[#111418] focus:ring-[#1587f9]" id="email-address" name="email" placeholder="Email address" required="" type="email"/>
+</div>
+<div>
+<label class="sr-only" for="password">Password</label>
+<input autocomplete="new-password" class="form-input w-full px-4 py-3 rounded-lg text-sm placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-[#111418] focus:ring-[#1587f9]" id="password" name="password" placeholder="Password" required="" type="password"/>
+</div>
+<div>
+<label class="sr-only" for="confirm-password">Confirm Password</label>
+<input autocomplete="new-password" class="form-input w-full px-4 py-3 rounded-lg text-sm placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-[#111418] focus:ring-[#1587f9]" id="confirm-password" name="confirm-password" placeholder="Confirm Password" required="" type="password"/>
+</div>
+<div class="flex items-center justify-between">
+<div class="flex items-center">
+<input class="h-4 w-4 rounded border-gray-600 bg-gray-700 text-[#1587f9] focus:ring-[#1587f9]" id="remember-me" name="remember-me" type="checkbox"/>
+<label class="ml-2 block text-sm text-gray-300" for="remember-me">
+                    I agree to the <a class="font-medium text-[#1587f9] hover:underline" href="#">Terms</a> &amp; <a class="font-medium text-[#1587f9] hover:underline" href="#">Privacy Policy</a>
+</label>
+</div>
+</div>
+<div>
+<button class="group relative w-full flex justify-center py-3 px-4 border border-transparent text-sm font-bold rounded-lg text-white bg-[#1587f9] hover:bg-[#1171d1] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-[#111418] focus:ring-[#1587f9] transition-colors" type="submit">
+                  Create account
+                </button>
+</div>
+</form>
+<p class="mt-8 text-center text-sm text-gray-400">
+              Already have an account?
+              <a class="font-medium text-[#1587f9] hover:underline" href="#">
+                Sign In
+              </a>
+</p>
+</div>
+</div>
+</main>
+<footer class="bg-transparent">
+<div class="container mx-auto px-6 py-8">
+<div class="flex flex-col items-center text-center">
+<div class="flex flex-wrap justify-center gap-x-6 gap-y-4 mb-4">
+<a class="text-sm text-gray-400 hover:text-white transition-colors" href="#">Terms of Service</a>
+<a class="text-sm text-gray-400 hover:text-white transition-colors" href="#">Privacy Policy</a>
+<a class="text-sm text-gray-400 hover:text-white transition-colors" href="#">Contact Us</a>
+</div>
+<p class="text-sm text-gray-500">© 2024 Centinal. All rights reserved.</p>
+</div>
+</div>
+</footer>
+</div>
+
+</body></html>

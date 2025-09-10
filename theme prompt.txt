@@ -1,0 +1,137 @@
+
+---
+
+**Prompt:**
+Generate a modern, responsive multi-page website for a **SBOM Validation** tool called **“Centinal”**. Use a consistent theme and design system across **4 pages**: **Home**, **TryOut**, **Sign In**, **Sign Up**.
+
+### Brand & Theme
+
+* **Palette:** Electric Blue `#1E90FF`, Deep Blue `#0B235A`, Near-Black `#0B0F14`, White `#FFFFFF`, Soft Gray `#E6EAF2`.
+* **Style:** Clean, techy, glass-morphism cards (translucent white/blue with blur), soft shadows, rounded corners (20–24px).
+* **Logo:** Large wordmark “**Centinal**” (big, bold, tracking slightly wide). Show a simple shield or checkmark inside a hexagon as an icon.
+* **Typography:** Headings tall and bold; body highly legible.
+* **Animations:** Subtle fades/slide-ins on scroll, micro-interactions on hover (buttons, cards), gentle parallax blobs in the hero background (blue gradients). Respect reduced-motion.
+
+### Global Layout (shared on all pages)
+
+* **Header/Nav (sticky):** Left: Centinal logo wordmark. Right nav links: Home, TryOut, Sign In, Sign Up. Prominent **TryOut** CTA button (blue → white on hover).
+* **Footer:** Left: mini logo + brief description; Middle: links (Docs, Privacy, Terms, Contact); Right: social placeholders. Thin top border, subtle glass background.
+
+### Components (Design System)
+
+* **Buttons:** Primary (Electric Blue), Secondary (Glass), Destructive (Red). States: hover, active, disabled, loading spinner.
+* **Cards:** Glass cards with backdrop blur (e.g., `backdrop-blur: 12px; background: rgba(255,255,255,0.12)` on dark; or `rgba(14,144,255,0.08)`), soft shadow, rounded corners.
+* **Inputs:** Large, rounded input fields and text areas; focus ring Electric Blue.
+* **Badges/Chips:** “JSON”, “XML”, “Valid”, “Issues Found”.
+* **Toasts:** Success (green edge), Error (red edge), Info (blue edge).
+* **Tabs/Steps:** For “How It Works” steps.
+
+---
+
+## Page 1: Home
+
+**Sections (in order):**
+
+1. **Hero / Introduction**
+
+   * Big “Centinal” logo wordmark.
+   * Headline: “Validate SBOMs with Confidence.”
+   * Subhead: “Upload or paste JSON/XML SBOMs to instantly validate format, schema, and key compliance checks.”
+   * CTAs: **Try it now** (primary) and **View Features** (secondary).
+   * Background: blue gradient blobs + subtle animated particles; glass hero card overlay with quick feature bullets.
+
+2. **Features (3–6 glass cards)**
+
+   * Example cards:
+
+     * “Multi-format Support” (JSON & XML)
+     * “Schema Validation” (CycloneDX, SPDX placeholders)
+     * “Instant Feedback & Reports”
+     * “Security & Privacy by Design”
+     * “CLI & API Ready” (placeholder)
+   * Each card: icon, title, short copy, hover lift + glow.
+
+3. **How to Use (3 steps)**
+
+   * Step 1: “Upload your SBOM file or paste raw content.”
+   * Step 2: “We validate structure, schema, and required fields.”
+   * Step 3: “Get instant results: pass/fail, issues, and quick fixes.”
+   * Show as horizontal steps or numbered cards with simple line connectors.
+
+4. **Companies Using Centinal**
+
+   * Grid of grayscale logo placeholders (6–8). Title: “Trusted by teams building safer software.” Subtle hover.
+
+5. **Feedback / Testimonials**
+
+   * Carousel or 3–4 glass cards with user/company quotes, role, company logo placeholder, star rating.
+
+6. **Call to Action**
+
+   * Glass banner: “Ready to validate your SBOMs?” Buttons: **TryOut** (primary), **Sign Up** (secondary).
+
+7. **Footer** (global)
+
+---
+
+## Page 2: TryOut
+
+**Goal:** Let users upload a file **or** paste raw content (XML/JSON) and process it.
+
+**Layout:**
+
+* **Intro panel:** Short blurb: “Drop a file (.json, .xml) or paste SBOM content below. We’ll validate format & schema.”
+* **Uploader card (glass):**
+
+  * Drag-and-drop zone + “Browse file” button. Accept `.json, .xml`.
+  * Below: **OR** a large text area (8–12 rows) labeled “Paste SBOM (JSON or XML)”.
+  * Toggle/Chips: “JSON” / “XML” (optional).
+  * Validate button (primary), Reset (secondary).
+* **Processing state:** Progress bar, animated dots.
+* **Results section:**
+
+  * Summary card: Status **Valid / Issues Found** (badge).
+  * Two columns:
+
+    * **Overview:** Detected format, schema version placeholder, file size, parse time.
+    * **Issues/Warnings list:** Each item is expandable with code snippet highlight and suggested fix text.
+  * **Download Report** (JSON), **Copy Summary**, **Validate Another**.
+* **Error states:** Friendly errors for invalid format, empty input, or oversized file.
+* **Info note:** “Your data is processed in-browser for this demo” (placeholder).
+
+---
+
+## Page 3: Sign In
+
+* Glass card centered, large title “Welcome back”.
+* Fields: Email, Password.
+* Actions: **Sign In** (primary), “Forgot password?” link.
+* Divider: “Or continue with”—placeholder OAuth buttons (GitHub/Google).
+* Small text: “Don’t have an account? **Sign Up**”.
+
+## Page 4: Sign Up
+
+* Glass card centered, large title “Create your account”.
+* Fields: Full Name, Email, Password, Confirm Password.
+* Checkbox: “I agree to the Terms & Privacy Policy” (link).
+* Actions: **Create account** (primary).
+* Small text: “Already have an account? **Sign In**”.
+
+---
+
+### Accessibility & Responsiveness
+
+* Mobile-first; stack sections; keep paddings generous.
+* High contrast text on dark backgrounds; focus rings visible; aria labels on inputs/buttons.
+* Respect “prefers-reduced-motion”.
+
+### Nice-to-Haves
+
+* Subtle glass nav blur when scrolling.
+* Animated gradient border on primary buttons on hover.
+* Code-style monospace in results.
+* Placeholder routes for Docs, API, Privacy, Terms.
+
+**Deliverables:** All 4 pages with shared header/footer, theme, components, and animations as described. Use placeholder images/logos/text where needed.
+
+---
