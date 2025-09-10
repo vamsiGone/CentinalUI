@@ -1,0 +1,143 @@
+<html><head>
+<meta charset="utf-8"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<link as="style" href="https://fonts.googleapis.com/css2?display=swap&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900&amp;family=Space+Grotesk%3Awght%40400%3B500%3B700" onload="this.rel='stylesheet'" rel="stylesheet"/>
+<title>Centinal - Sign In</title>
+<link href="data:image/x-icon;base64," rel="icon" type="image/x-icon"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+</head>
+<body class="bg-gray-900" style='font-family: "Space Grotesk", "Noto Sans", sans-serif;'>
+<div class="relative flex size-full min-h-screen flex-col bg-[#101923] text-white dark group/design-root overflow-x-hidden">
+<header class="sticky top-0 z-50 flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#21344a] bg-[#101923]/80 px-10 py-3 backdrop-blur-sm">
+<div class="flex items-center gap-4">
+<svg class="h-8 w-8 text-[#157bf9]" fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M24 45.8096C19.6865 45.8096 15.4698 44.5305 11.8832 42.134C8.29667 39.7376 5.50128 36.3314 3.85056 32.3462C2.19985 28.361 1.76794 23.9758 2.60947 19.7452C3.451 15.5145 5.52816 11.6284 8.57829 8.5783C11.6284 5.52817 15.5145 3.45101 19.7452 2.60948C23.9758 1.76795 28.361 2.19986 32.3462 3.85057C36.3314 5.50129 39.7376 8.29668 42.134 11.8833C44.5305 15.4698 45.8096 19.6865 45.8096 24L24 24L24 45.8096Z" fill="currentColor"></path>
+</svg>
+<h1 class="text-xl font-bold tracking-tight">Centinal</h1>
+</div>
+<nav class="hidden items-center gap-6 md:flex">
+<a class="text-sm font-medium text-gray-300 transition-colors hover:text-white" href="index.html">Home</a>
+<a class="text-sm font-medium text-gray-300 transition-colors hover:text-white" href="tryout.html">TryOut</a>
+<a class="text-sm font-medium text-white" href="signin.html">Sign In</a>
+<a class="text-sm font-medium text-gray-300 transition-colors hover:text-white" href="signup.html">Sign Up</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-[#157bf9] text-white text-sm font-bold leading-normal tracking-[0.015em] transition-colors hover:bg-[#157bf9]/90">
+<span class="truncate">TryOut</span>
+</button>
+<button class="md:hidden">
+<span class="material-symbols-outlined"> menu </span>
+</button>
+</div>
+</header>
+<main class="flex flex-1 items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
+<div class="w-full max-w-md space-y-8">
+<div class="rounded-xl border border-[#21344a] bg-clip-padding backdrop-filter backdrop-blur-xl bg-opacity-60 p-8 shadow-2xl" style="background: rgba(33, 52, 74, 0.2); backdrop-filter: blur(10px); border: 1px solid rgba(33, 52, 74, 0.5)">
+<h2 class="text-center text-4xl font-bold tracking-tight text-white">Welcome back</h2>
+<form action="#" class="mt-8 space-y-6" method="POST">
+<input name="remember" type="hidden" value="true"/>
+<div class="rounded-md shadow-sm -space-y-px">
+<div>
+<label class="sr-only" for="email-address">Email address</label>
+<input autocomplete="email" class="form-input relative block w-full appearance-none rounded-lg border-none bg-[#21344a] px-4 py-4 text-base text-white placeholder-gray-400 focus:z-10 focus:outline-none focus:ring-2 focus:ring-[#157bf9] sm:text-sm" id="email-address" name="email" placeholder="Email" required="" type="email"/>
+</div>
+<div class="pt-4">
+<label class="sr-only" for="password">Password</label>
+<input autocomplete="current-password" class="form-input relative block w-full appearance-none rounded-lg border-none bg-[#21344a] px-4 py-4 text-base text-white placeholder-gray-400 focus:z-10 focus:outline-none focus:ring-2 focus:ring-[#157bf9] sm:text-sm" id="password" name="password" placeholder="Password" required="" type="password"/>
+</div>
+</div>
+<div class="flex items-center justify-end">
+<div class="text-sm">
+<a class="font-medium text-[#8eaacc] hover:text-[#157bf9]" href="#"> Forgot password? </a>
+</div>
+</div>
+<div>
+<button class="group relative flex w-full justify-center rounded-lg border border-transparent bg-[#157bf9] py-3 px-4 text-sm font-bold text-white hover:bg-[#157bf9]/90 focus:outline-none focus:ring-2 focus:ring-[#157bf9] focus:ring-offset-2 focus:ring-offset-gray-900" type="submit">
+                  Sign In
+                </button>
+</div>
+<div class="relative flex items-center justify-center">
+<div class="flex-grow border-t border-gray-600"></div>
+<span class="mx-4 flex-shrink text-sm text-gray-400">Or continue with</span>
+<div class="flex-grow border-t border-gray-600"></div>
+</div>
+<div class="grid grid-cols-2 gap-3">
+<button class="inline-flex w-full justify-center rounded-lg border border-gray-700 bg-[#21344a] py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-gray-700" type="button">
+                  GitHub
+                </button>
+<button class="inline-flex w-full justify-center rounded-lg border border-gray-700 bg-[#21344a] py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-gray-700" type="button">
+                  Google
+                </button>
+</div>
+<div class="text-center text-sm text-gray-400">
+                Don’t have an account?
+                <a class="font-medium text-[#8eaacc] hover:text-[#157bf9]" href="#"> Sign Up </a>
+</div>
+</form>
+</div>
+</div>
+</main>
+<footer class="w-full border-t border-solid border-t-[#21344a] bg-[#101923] py-8 px-4 sm:px-6 lg:px-8">
+<div class="mx-auto max-w-7xl">
+<div class="grid grid-cols-1 gap-8 md:grid-cols-3">
+<div class="flex flex-col items-center md:items-start">
+<div class="flex items-center gap-2">
+<svg class="h-6 w-6 text-[#157bf9]" fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M24 45.8096C19.6865 45.8096 15.4698 44.5305 11.8832 42.134C8.29667 39.7376 5.50128 36.3314 3.85056 32.3462C2.19985 28.361 1.76794 23.9758 2.60947 19.7452C3.451 15.5145 5.52816 11.6284 8.57829 8.5783C11.6284 5.52817 15.5145 3.45101 19.7452 2.60948C23.9758 1.76795 28.361 2.19986 32.3462 3.85057C36.3314 5.50129 39.7376 8.29668 42.134 11.8833C44.5305 15.4698 45.8096 19.6865 45.8096 24L24 24L24 45.8096Z" fill="currentColor"></path>
+</svg>
+<h2 class="text-lg font-bold text-white">Centinal</h2>
+</div>
+<p class="mt-2 text-center text-sm text-gray-400 md:text-left">SBOM Validation Tool</p>
+</div>
+<nav class="grid grid-cols-2 gap-8 text-center md:grid-cols-4 md:text-left col-span-2">
+<div>
+<h3 class="text-sm font-semibold uppercase tracking-wider text-gray-400">Solutions</h3>
+<ul class="mt-4 space-y-2">
+<li><a class="text-base text-gray-300 hover:text-white" href="#">Docs</a></li>
+</ul>
+</div>
+<div>
+<h3 class="text-sm font-semibold uppercase tracking-wider text-gray-400">Support</h3>
+<ul class="mt-4 space-y-2">
+<li><a class="text-base text-gray-300 hover:text-white" href="#">Contact</a></li>
+</ul>
+</div>
+<div>
+<h3 class="text-sm font-semibold uppercase tracking-wider text-gray-400">Company</h3>
+<ul class="mt-4 space-y-2">
+<li><a class="text-base text-gray-300 hover:text-white" href="#">About</a></li>
+</ul>
+</div>
+<div>
+<h3 class="text-sm font-semibold uppercase tracking-wider text-gray-400">Legal</h3>
+<ul class="mt-4 space-y-2">
+<li><a class="text-base text-gray-300 hover:text-white" href="#">Privacy</a></li>
+<li><a class="text-base text-gray-300 hover:text-white" href="#">Terms</a></li>
+</ul>
+</div>
+</nav>
+</div>
+<div class="mt-8 border-t border-gray-700 pt-8 flex flex-col items-center justify-between sm:flex-row">
+<p class="text-sm text-gray-400">© 2024 Centinal. All rights reserved.</p>
+<div class="mt-4 flex space-x-6 sm:mt-0">
+<a class="text-gray-400 hover:text-white" href="#">
+<span class="sr-only">Twitter</span>
+<svg aria-hidden="true" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+<path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.71v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"></path>
+</svg>
+</a>
+<a class="text-gray-400 hover:text-white" href="#">
+<span class="sr-only">GitHub</span>
+<svg aria-hidden="true" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+<path clip-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.165 6.839 9.49.5.092.682-.217.682-.482 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.031-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.203 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.338 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.745 0 .268.18.58.688.482A10.001 10.001 0 0022 12c0-5.523-4.477-10-10-10z" fill-rule="evenodd"></path>
+</svg>
+</a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+
+</body></html>

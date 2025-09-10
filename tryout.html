@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html><head>
+<meta charset="utf-8"/>
+<link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
+<link as="style" href="https://fonts.googleapis.com/css2?display=swap&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900&amp;family=Space+Grotesk%3Awght%40400%3B500%3B700" onload="this.rel='stylesheet'" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<title>Centinal - TryOut</title>
+<link href="data:image/x-icon;base64," rel="icon" type="image/x-icon"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<style type="text/tailwindcss">
+      :root {
+        --primary-color: #157bf9;
+        --secondary-color: #21344a;
+        --background-color: #101923;
+        --text-primary: #ffffff;
+        --text-secondary: #8eaacc;
+        --border-color: #2f4a6a;
+      }
+      .glass-card {
+        background: rgba(33, 52, 74, 0.4);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        border: 1px solid var(--border-color);
+      }
+      .processing-dots span {
+          animation: blink 1.4s infinite both;
+      }
+      .processing-dots span:nth-child(2) {
+          animation-delay: 0.2s;
+      }
+      .processing-dots span:nth-child(3) {
+          animation-delay: 0.4s;
+      }
+      @keyframes blink {
+          0% { opacity: 0.2; }
+          20% { opacity: 1; }
+          100% { opacity: 0.2; }
+      }
+    </style>
+</head>
+<body class="bg-[var(--background-color)] text-[var(--text-primary)]" style='font-family: "Space Grotesk", "Noto Sans", sans-serif;'>
+<div class="relative flex size-full min-h-screen flex-col overflow-x-hidden">
+<header class="sticky top-0 z-50 flex items-center justify-between whitespace-nowrap border-b border-solid border-[var(--border-color)] bg-[var(--background-color)]/80 px-10 py-3 backdrop-blur-sm">
+<div class="flex items-center gap-4">
+<svg fill="none" height="24" viewBox="0 0 48 48" width="24" xmlns="http://www.w3.org/2000/svg">
+<path d="M24 45.8096C19.6865 45.8096 15.4698 44.5305 11.8832 42.134C8.29667 39.7376 5.50128 36.3314 3.85056 32.3462C2.19985 28.361 1.76794 23.9758 2.60947 19.7452C3.451 15.5145 5.52816 11.6284 8.57829 8.5783C11.6284 5.52817 15.5145 3.45101 19.7452 2.60948C23.9758 1.76795 28.361 2.19986 32.3462 3.85057C36.3314 5.50129 39.7376 8.29668 42.134 11.8833C44.5305 15.4698 45.8096 19.6865 45.8096 24L24 24L24 45.8096Z" fill="currentColor"></path>
+</svg>
+<h1 class="text-xl font-bold">Centinal</h1>
+</div>
+<nav class="hidden md:flex items-center gap-6 text-sm font-medium text-[var(--text-secondary)]">
+<a class="hover:text-[var(--text-primary)] transition-colors" href="index.html">Home</a>
+<a class="text-[var(--text-primary)] font-bold" href="#">TryOut</a>
+<a class="hover:text-[var(--text-primary)] transition-colors" href="#">Docs</a>
+</nav>
+<div class="flex items-center gap-4">
+<a class="text-sm font-medium hover:text-[var(--text-primary)] transition-colors text-[var(--text-secondary)]" href="signin.html">Sign In</a>
+<a class="flex min-w-[84px] items-center justify-center rounded-lg h-10 px-4 bg-[var(--primary-color)] text-white text-sm font-bold leading-normal tracking-[0.015em] hover:bg-blue-600 transition-colors" href="signup.html">
+<span>Sign Up</span>
+</a>
+</div>
+</header>
+<main class="flex flex-1 justify-center py-12 px-4 sm:px-6 lg:px-8">
+<div class="w-full max-w-4xl space-y-8">
+<div class="text-center">
+<h2 class="text-4xl font-bold tracking-tight sm:text-5xl">Try Out Centinal</h2>
+<p class="mt-4 text-lg text-[var(--text-secondary)]">Drop a file (.json, .xml) or paste SBOM content below. We’ll validate format &amp; schema.</p>
+</div>
+<div class="glass-card rounded-xl p-6 sm:p-8 space-y-6">
+<div class="relative border-2 border-dashed border-[var(--border-color)] rounded-xl p-8 text-center hover:border-[var(--primary-color)] transition-colors group">
+<div class="flex flex-col items-center justify-center space-y-4">
+<span class="material-symbols-outlined text-5xl text-[var(--text-secondary)] group-hover:text-[var(--primary-color)] transition-colors">upload_file</span>
+<p class="text-lg font-medium">Drag and drop a file here</p>
+<p class="text-[var(--text-secondary)]">or</p>
+<label class="cursor-pointer rounded-lg bg-[var(--primary-color)] px-5 py-2.5 text-sm font-semibold text-white hover:bg-blue-600 transition-colors" for="file-upload">
+                                Browse file
+                            </label>
+<input accept=".json,.xml" class="sr-only" id="file-upload" name="file-upload" type="file"/>
+</div>
+</div>
+<div class="relative">
+<div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+<span class="material-symbols-outlined text-[var(--text-secondary)]">code</span>
+</div>
+<textarea class="form-input block w-full resize-y rounded-lg border border-[var(--border-color)] bg-[#182535] p-4 pl-10 min-h-[150px] text-base placeholder:text-[var(--text-secondary)] focus:border-[var(--primary-color)] focus:ring-0 transition-colors" placeholder="Paste SBOM (JSON or XML)"></textarea>
+</div>
+<div class="flex flex-col sm:flex-row items-center justify-between gap-4">
+<div class="flex items-center gap-3">
+<button class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-full bg-[var(--secondary-color)] px-4 text-sm font-medium hover:bg-opacity-80 transition-colors focus:ring-2 focus:ring-[var(--primary-color)] focus:outline-none">JSON</button>
+<button class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-full bg-transparent border border-[var(--border-color)] px-4 text-sm font-medium text-[var(--text-secondary)] hover:bg-[var(--secondary-color)] hover:text-white transition-colors">XML</button>
+</div>
+<div class="flex gap-3">
+<button class="flex min-w-[100px] items-center justify-center rounded-lg h-11 px-6 bg-[var(--primary-color)] text-white text-base font-bold hover:bg-blue-600 transition-colors">
+<span class="material-symbols-outlined mr-2">verified_user</span>
+                                Validate
+                            </button>
+<button class="flex min-w-[100px] items-center justify-center rounded-lg h-11 px-6 bg-[var(--secondary-color)] text-white text-base font-bold hover:bg-opacity-80 transition-colors">
+<span class="material-symbols-outlined mr-2">refresh</span>
+                                Reset
+                            </button>
+</div>
+</div>
+</div>
+<div class="hidden glass-card rounded-xl p-6 space-y-4" id="processing-state">
+<div class="flex items-center gap-3">
+<p class="text-lg font-medium">Processing</p>
+<div class="processing-dots flex gap-1">
+<span class="w-2 h-2 bg-[var(--primary-color)] rounded-full"></span>
+<span class="w-2 h-2 bg-[var(--primary-color)] rounded-full"></span>
+<span class="w-2 h-2 bg-[var(--primary-color)] rounded-full"></span>
+</div>
+</div>
+<div class="w-full bg-[var(--secondary-color)] rounded-full h-2.5">
+<div class="bg-[var(--primary-color)] h-2.5 rounded-full" style="width: 50%"></div>
+</div>
+</div>
+<div class="hidden space-y-8" id="results-section">
+<div class="glass-card rounded-xl">
+<div class="p-6 border-b border-[var(--border-color)] flex items-center justify-between">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-3xl text-green-400">check_circle</span>
+<h3 class="text-2xl font-bold">Valid</h3>
+</div>
+<div class="hidden items-center gap-3">
+<span class="material-symbols-outlined text-3xl text-red-400">error</span>
+<h3 class="text-2xl font-bold">Issues Found</h3>
+</div>
+</div>
+<div class="grid md:grid-cols-2 gap-x-8 gap-y-4 p-6">
+<div class="space-y-4">
+<h4 class="text-lg font-bold">Overview</h4>
+<dl class="space-y-3">
+<div class="flex justify-between">
+<dt class="text-[var(--text-secondary)]">Detected format</dt>
+<dd class="font-medium">JSON</dd>
+</div>
+<div class="flex justify-between">
+<dt class="text-[var(--text-secondary)]">Schema version</dt>
+<dd class="font-medium">1.4</dd>
+</div>
+<div class="flex justify-between">
+<dt class="text-[var(--text-secondary)]">File size</dt>
+<dd class="font-medium">1.2 MB</dd>
+</div>
+<div class="flex justify-between">
+<dt class="text-[var(--text-secondary)]">Parse time</dt>
+<dd class="font-medium">2.5s</dd>
+</div>
+</dl>
+</div>
+<div class="space-y-4">
+<h4 class="text-lg font-bold">Issues &amp; Warnings</h4>
+<div class="space-y-3 max-h-60 overflow-y-auto pr-2">
+<details class="group rounded-lg border border-[var(--border-color)] bg-[#101923]">
+<summary class="flex cursor-pointer items-center justify-between p-3 list-none">
+<span class="font-medium text-sm">Missing component version</span>
+<span class="material-symbols-outlined transition-transform group-open:rotate-180">expand_more</span>
+</summary>
+<div class="p-3 border-t border-[var(--border-color)] text-[var(--text-secondary)] text-sm space-y-2">
+<p><strong>Code:</strong> <code>"version": ""</code></p>
+<p><strong>Suggestion:</strong> Every component must have a version specified.</p>
+</div>
+</details>
+<details class="group rounded-lg border border-[var(--border-color)] bg-[#101923]">
+<summary class="flex cursor-pointer items-center justify-between p-3 list-none">
+<span class="font-medium text-sm">Invalid license format</span>
+<span class="material-symbols-outlined transition-transform group-open:rotate-180">expand_more</span>
+</summary>
+<div class="p-3 border-t border-[var(--border-color)] text-[var(--text-secondary)] text-sm space-y-2">
+<p><strong>Code:</strong> <code>"license": "MIT License"</code></p>
+<p><strong>Suggestion:</strong> Use SPDX license identifiers, e.g., "MIT".</p>
+</div>
+</details>
+</div>
+</div>
+</div>
+<div class="p-6 border-t border-[var(--border-color)] flex flex-wrap gap-4 justify-end">
+<button class="flex items-center justify-center rounded-lg h-10 px-4 bg-[var(--secondary-color)] text-white text-sm font-bold hover:bg-opacity-80 transition-colors">
+<span class="material-symbols-outlined mr-2 text-base">download</span>
+                                Download Report (JSON)
+                            </button>
+<button class="flex items-center justify-center rounded-lg h-10 px-4 bg-[var(--secondary-color)] text-white text-sm font-bold hover:bg-opacity-80 transition-colors">
+<span class="material-symbols-outlined mr-2 text-base">content_copy</span>
+                                Copy Summary
+                            </button>
+<button class="flex items-center justify-center rounded-lg h-10 px-4 bg-[var(--primary-color)] text-white text-sm font-bold hover:bg-blue-600 transition-colors">
+<span class="material-symbols-outlined mr-2 text-base">add_circle</span>
+                                Validate Another
+                            </button>
+</div>
+</div>
+</div>
+<p class="text-center text-sm text-[var(--text-secondary)]">
+<span class="material-symbols-outlined text-base align-middle mr-1">security</span>
+                     Your data is processed in-browser for this demo and never leaves your machine.
+                </p>
+</div>
+</main>
+<footer class="border-t border-[var(--border-color)] mt-16">
+<div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8 text-center">
+<div class="flex justify-center items-center gap-2 mb-6">
+<svg fill="none" height="20" viewBox="0 0 48 48" width="20" xmlns="http://www.w3.org/2000/svg">
+<path d="M24 45.8096C19.6865 45.8096 15.4698 44.5305 11.8832 42.134C8.29667 39.7376 5.50128 36.3314 3.85056 32.3462C2.19985 28.361 1.76794 23.9758 2.60947 19.7452C3.451 15.5145 5.52816 11.6284 8.57829 8.5783C11.6284 5.52817 15.5145 3.45101 19.7452 2.60948C23.9758 1.76795 28.361 2.19986 32.3462 3.85057C36.3314 5.50129 39.7376 8.29668 42.134 11.8833C44.5305 15.4698 45.8096 19.6865 45.8096 24L24 24L24 45.8096Z" fill="currentColor"></path>
+</svg>
+<h2 class="text-lg font-bold">Centinal</h2>
+</div>
+<nav class="flex flex-wrap justify-center gap-x-6 gap-y-2 mb-6 text-[var(--text-secondary)]">
+<a class="text-sm hover:text-[var(--text-primary)] transition-colors" href="#">Docs</a>
+<a class="text-sm hover:text-[var(--text-primary)] transition-colors" href="#">Privacy</a>
+<a class="text-sm hover:text-[var(--text-primary)] transition-colors" href="#">Terms</a>
+<a class="text-sm hover:text-[var(--text-primary)] transition-colors" href="#">Contact</a>
+</nav>
+<div class="flex justify-center space-x-6 mb-6">
+<a class="text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors" href="#">
+<svg aria-hidden="true" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+<path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.71v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"></path>
+</svg>
+</a>
+<a class="text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors" href="#">
+<svg aria-hidden="true" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+<path clip-rule="evenodd" d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" fill-rule="evenodd"></path>
+</svg>
+</a>
+</div>
+<p class="text-sm text-[var(--text-secondary)]">© 2024 Centinal. All rights reserved.</p>
+</div>
+</footer>
+</div>
+
+</body></html>
